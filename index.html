@@ -67,6 +67,16 @@
             margin-top: 10px;
         }
 
+        /* Estilo do Carrossel */
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: #000;
+        }
+
         /* Seção Sobre Nós */
         .about {
             padding: 40px 20px;
@@ -153,6 +163,30 @@
 <div class="banner">
     <h1>Transformando Vapor em Estilo</h1>
     <p>Descubra o futuro do vaping com a Nuvem Urbana.</p>
+    
+    <!-- Início do Carrossel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imagem1.jpg" class="d-block w-100" alt="Imagem 1">
+            </div>
+            <div class="carousel-item">
+                <img src="imagem2.jpg" class="d-block w-100" alt="Imagem 2">
+            </div>
+            <div class="carousel-item">
+                <img src="imagem3.jpg" class="d-block w-100" alt="Imagem 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Fim do Carrossel -->
 </div>
 
 <section id="about" class="about">
@@ -164,22 +198,26 @@
     <div class="product">
         <img src="https://bestvapebr.com/wp-content/uploads/2024/11/0c94578d228f19ff824d3b15cb87c943.png" alt="Produto 1">
         <h3>Ignite V250 25 Mil Puxadas (Premium)</h3>
-          <a href="https://wa.me/61986193142" target="_blank">
-        <button>Acessar</button>
+        <a href="https://wa.me/61986193142" target="_blank">
+            <button>Acessar</button>
+        </a>
     </div>
     <div class="product">
-    <img src="https://atacadopods.com/wp-content/uploads/2024/10/lost-mary-combo-20k-disposable-Atacado-Pods.webp" alt="Produto 2">
-    <h3>Lost Mary 20 Mil Puxadas (Lançamento)</h3>
-    <a href="https://wa.me/61986193142" target="_blank">
-        <button>Acessar</button>
-    </a>
-</div>
+        <img src="https://atacadopods.com/wp-content/uploads/2024/10/lost-mary-combo-20k-disposable-Atacado-Pods.webp" alt="Produto 2">
+        <h3>Lost Mary 20 Mil Puxadas (Lançamento)</h3>
+        <a href="https://wa.me/61986193142" target="_blank">
+            <button>Acessar</button>
+        </a>
+    </div>
 </section>
 
 <footer id="contact">
     <p>&copy; 2024 Nuvem Urbana. Todos os direitos reservados.</p>
     <p>Siga-nos: <a href="">Instagram</a> | <a href="">WhatsApp</a></p>
 </footer>
+
+<!-- Adicionando Bootstrap JS (se não estiver incluindo o arquivo já) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
