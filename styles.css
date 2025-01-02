@@ -116,6 +116,7 @@ header nav ul li a:hover {
 .products .product-item img {
     width: 100%;
     height: auto;
+    max-height: 300px; /* Limita a altura das imagens */
     border-radius: 10px;
     margin-bottom: 15px;
 }
