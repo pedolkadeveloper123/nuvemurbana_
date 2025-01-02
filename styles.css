@@ -46,6 +46,17 @@ header nav ul li a:hover {
     color: #34eb83;
 }
 
+
+.produtos .produto-item img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Limita a altura das imagens */
+    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
 /* Estilização do Hero Section */
 .hero {
     height: 100vh;
