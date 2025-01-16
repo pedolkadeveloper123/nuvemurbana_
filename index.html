@@ -8,8 +8,8 @@
         /* Reset básico */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a; /* Fundo escuro */
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; /* Fundo escuro moderno */
             color: #ffffff; /* Texto claro */
         }
 
@@ -21,32 +21,32 @@
             text-align: center;
             font-size: 1.5em;
             font-weight: bold;
-            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header img {
-            max-height: 60px;
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
+            max-height: 50px;
         }
 
         nav {
             display: flex;
-            justify-content: center;
-            margin-top: 10px;
+            gap: 15px;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
             font-size: 1.1em;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
         nav a:hover {
-            color: #32ff7e;
+            background: #32ff7e;
+            color: #000;
         }
 
         /* Banner Principal */
@@ -58,8 +58,9 @@
         }
 
         .banner h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin: 0;
+            font-weight: bold;
         }
 
         .banner p {
@@ -67,25 +68,22 @@
             margin-top: 10px;
         }
 
-        /* Estilo do Carrossel */
-        .carousel-inner img {
-            width: 100%;
-            height: auto;
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #ff4dff;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
         }
 
-        .carousel-control-prev-icon, .carousel-control-next-icon {
-            background-color: #000;
-        }
-
-        /* Seção Sobre Nós */
-        .about {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .about h2 {
-            color: #32ff7e;
-            font-size: 2em;
+        .cta-button:hover {
+            background: #32ff7e;
+            color: #000;
         }
 
         /* Produtos */
@@ -93,17 +91,23 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 20px;
+            gap: 20px;
+            padding: 40px 20px;
+            background: #1a1a1a;
         }
 
         .product {
             background: #292929;
             border: 2px solid #32ff7e;
             border-radius: 10px;
-            margin: 15px;
             padding: 20px;
             text-align: center;
-            width: 250px;
+            width: 280px;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
         }
 
         .product img {
@@ -112,7 +116,7 @@
         }
 
         .product h3 {
-            margin: 10px 0;
+            margin: 15px 0;
             color: #18dcff;
         }
 
@@ -123,10 +127,13 @@
             padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
         }
 
         .product button:hover {
             background: #32ff7e;
+            color: #000;
         }
 
         /* Footer */
@@ -141,6 +148,7 @@
         footer a {
             color: #32ff7e;
             text-decoration: none;
+            font-weight: bold;
         }
 
         footer a:hover {
@@ -152,82 +160,47 @@
 
 <header>
     <img src="https://i.postimg.cc/ThMcJWyx/DALL-E-2024-12-09-13-18-57-A-modern-colorful-logo-for-a-brand-called-Nuvem-Urbana-featuring-vi.webp" alt="Logo Nuvem Urbana">
-    Nuvem Urbana
     <nav>
-        
         <a href="#products">Produtos</a>
+        <a href="#about">Sobre Nós</a>
         <a href="#contact">Contato</a>
     </nav>
 </header>
 
 <div class="banner">
     <h1>Transformando Vapor em Estilo</h1>
-    <p>Descubra o futuro do vaping com a Nuvem Urbana.</p>
-    
-    <!-- Início do Carrossel -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://i.postimg.cc/Jz2brvPZ/f9ca973f-086f-4570-9d52-08d691afde9f.webp" class="d-block w-100" alt="Imagem 1">
-            </div>
-            <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="">
-            </div>
-            <div class="carousel-item">
-                <img src="https://i.postimg.cc/SRkP44Tg/1000083644.jpg" class="d-block w-100" alt="">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!-- Fim do Carrossel -->
+    <p>Descubra o futuro do vaping com a Nuvem Urbana. Exclusividade, Lifestyle e Poder! 💜</p>
+    <a href="#products" class="cta-button">Veja nossos produtos</a>
 </div>
-
-<section id="about" class="about">
-    <h2>Sobre Nós</h2>
-    <p>A Nuvem Urbana é mais do que uma loja de cigarros eletrônicos, é um estilo de vida. Conectando tecnologia, design e qualidade para oferecer a melhor experiência em vaping.
-    Sabores exclusivos da linha Ignite (Your Life, Your Way).💜 </p>
-</section>
 
 <section id="products" class="products">
     <div class="product">
         <img src="https://cdn.awsli.com.br/2500x2500/2560/2560778/produto/277505354/f256e8f9f2a82c9812a5fbf123ba97ef-uzgiqc0knd.jpg" alt="Produto 1">
-        <h3>Ignite V150 15 Mil Puxadas (Premium)</h3>
+        <h3>Ignite V150 15 Mil Puxadas</h3>
         <a href="https://wa.me/61986193142?text=Olá%20Nuvem%20Urbana,%20gostaria%20de%20saber%20mais%20do%20Ignite%20V150!" target="_blank">
-            <button>Acessar</button>
+            <button>Saiba Mais</button>
         </a>
     </div>
     <div class="product">
         <img src="https://images.tcdn.com.br/img/img_prod/1329322/pod_descartavel_ignite_v250_25000_puffs_2153_1_52c5b354f2dbbabe5f768787e65a7248.jpeg" alt="Produto 2">
-        <h3>Ignite V250 25 Mil Puxadas (Premium) (Lançamento)</h3>
+        <h3>Ignite V250 25 Mil Puxadas</h3>
         <a href="https://wa.me/61986193142?text=Olá%20Nuvem%20Urbana,%20gostaria%20de%20saber%20mais%20do%20Ignite%20V250!" target="_blank">
-            <button>Acessar</button>
+            <button>Saiba Mais</button>
         </a>
     </div>
-
- <div class="product">
-        <img src="https://acdn.mitiendanube.com/stores/003/652/778/products/black-white-coming-soon-instagram-post-zip-4-c70157b9e1f1e6091e17265237020868-1024-1024.png" alt="Produto 2">
-        <h3>Ignite V80 8 Mil Puxadas (Durabilidade surreal!) </h3>
+    <div class="product">
+        <img src="https://acdn.mitiendanube.com/stores/003/652/778/products/black-white-coming-soon-instagram-post-zip-4-c70157b9e1f1e6091e17265237020868-1024-1024.png" alt="Produto 3">
+        <h3>Ignite V80 8 Mil Puxadas</h3>
         <a href="https://wa.me/61986193142?text=Olá%20Nuvem%20Urbana,%20gostaria%20de%20saber%20mais%20do%20Ignite%20V80!" target="_blank">
-            <button>Acessar</button>
+            <button>Saiba Mais</button>
         </a>
     </div>
-
 </section>
 
 <footer id="contact">
     <p>&copy; 2025 Nuvem Urbana. Todos os direitos reservados.</p>
-    <p>Siga-nos: <a href="">Instagram</a> | <a href="">WhatsApp</a></p>
+    <p>Siga-nos: <a href="#">Instagram</a> | <a href="#">WhatsApp</a></p>
 </footer>
-
-<!-- Adicionando Bootstrap JS (se não estiver incluindo o arquivo já) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
